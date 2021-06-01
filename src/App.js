@@ -1,21 +1,18 @@
-import { Container } from "@chakra-ui/layout";
-import { Box } from "@chakra-ui/layout";
-import Socials from "./components/Socials";
-import Head from "./components/Head";
-import Posts from "./components/Posts";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Dark from "./pages/Dark";
+import Home from "./pages/Home";
 
-function App() {
+export default function App() {
   return (
-    <Box>
-      <Box mt={{ base: 12, md: 28 }}>
-        <Container>
-          <Head />
-          <Socials />
-          <Posts />
-        </Container>
-      </Box>
-    </Box>
+    <Router>
+      <Switch>
+        <Route path="/" exact>
+          <Home />
+        </Route>
+        <Route path="/dark" exact>
+          <Dark />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
-
-export default App;
