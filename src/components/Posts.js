@@ -6,9 +6,17 @@ import { Flex } from "@chakra-ui/layout";
 import { Box } from "@chakra-ui/layout";
 import { Tag } from "@chakra-ui/tag";
 
-const Post = ({ image, title, description, tags = [] }) => {
+const Post = ({ href, image, title, description, tags = [] }) => {
   return (
-    <Box p={4} borderWidth="1px" borderRadius="lg" shadow="md">
+    <Box
+      as="a"
+      href={href}
+      target="_blank"
+      p={4}
+      borderWidth="1px"
+      borderRadius="lg"
+      shadow="md"
+    >
       <Flex>
         <Image borderRadius="lg" w={"44"} src={image} />
         <Box ml={2}>
@@ -35,6 +43,7 @@ export default () => {
       <Heading mb={4}>Recent Posts</Heading>
       <Stack spacing={4} _hover={{ cursor: "pointer" }}>
         <Post
+          href="https://xen.codes/dark"
           title="The Dark Side of Web Development"
           description="A complete web development series covering all aspects of the development process."
           image="/assets/dark-logo.png"
