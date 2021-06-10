@@ -49,6 +49,13 @@ export default () => {
           image="/assets/dark-logo.png"
           tags={["html", "css", "js", "node.js"]}
         />
+        <Post
+          href="https://www.youtube.com/playlist?list=PL2guVjsa6dz9yd8ChqIQUg20I7WHXevyx"
+          title="Hello React"
+          description="Learn full stack development using React JS and a backend server."
+          image="/assets/full-stack-react.png"
+          tags={["html", "reactjs", "node.js"]}
+        />
       </Stack>
     </Box>
   );
