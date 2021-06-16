@@ -23,6 +23,7 @@ import {
   FiUser,
 } from "react-icons/fi";
 import { AiOutlineGithub, AiOutlineInstagram } from "react-icons/ai";
+import { FaReact, FaAngular, FaVuejs, FaNode } from "react-icons/fa";
 
 export default () => {
   const Header = () => (
@@ -42,11 +43,19 @@ export default () => {
     </Box>
   );
 
-  const ExperienceItem = ({ title, value, color }) => (
-    <Box>
-      <Heading fontSize="lg">{title}</Heading>
-      <Progress mt={2} colorScheme={color || "green"} size="sm" value={value} />
-    </Box>
+  const ExperienceItem = ({ title, value, color, icon }) => (
+    <Flex alignItems="center">
+      <Box fontSize="3xl">{icon}</Box>
+      <Box w="100%" ml={2}>
+        <Heading fontSize="lg">{title}</Heading>
+        <Progress
+          mt={2}
+          colorScheme={color || "green"}
+          size="sm"
+          value={value}
+        />
+      </Box>
+    </Flex>
   );
 
   const ProjectItem = ({ title, description, logo, link }) => (
@@ -132,9 +141,21 @@ export default () => {
               <Box p={4} borderRadius="lg" borderWidth="1px">
                 <Heading>Frontend</Heading>
                 <Stack mt={4} spacing={4}>
-                  <ExperienceItem title="React JS" value={98} />
-                  <ExperienceItem title="Angular JS" value={50} />
-                  <ExperienceItem title="Vue JS" value={20} />
+                  <ExperienceItem
+                    title="React JS"
+                    value={98}
+                    icon={<FaReact />}
+                  />
+                  <ExperienceItem
+                    title="Angular JS"
+                    value={50}
+                    icon={<FaAngular />}
+                  />
+                  <ExperienceItem
+                    title="Vue JS"
+                    value={20}
+                    icon={<FaVuejs />}
+                  />
                 </Stack>
               </Box>
             </GridItem>
