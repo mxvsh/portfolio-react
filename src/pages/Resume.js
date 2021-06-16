@@ -134,7 +134,7 @@ export default () => {
                 <Stack mt={4} spacing={4}>
                   <ExperienceItem title="React JS" value={98} />
                   <ExperienceItem title="Angular JS" value={50} />
-                  <ExperienceItem title="Vue JS" value={50} />
+                  <ExperienceItem title="Vue JS" value={20} />
                 </Stack>
               </Box>
             </GridItem>
@@ -157,16 +157,23 @@ export default () => {
                     title="React Native"
                     value={85}
                   />
+                  <ExperienceItem color="purple" title="Flutter" value={45} />
                   <ExperienceItem color="purple" title="Database" value={60} />
+
                   <ExperienceItem
                     color="purple"
-                    title="Desigining"
-                    value={85}
+                    title="Domain Setup"
+                    value={98}
                   />
                   <ExperienceItem
                     color="purple"
                     title="Networking"
                     value={20}
+                  />
+                  <ExperienceItem
+                    color="purple"
+                    title="Desigining"
+                    value={55}
                   />
                 </Stack>
               </Box>
