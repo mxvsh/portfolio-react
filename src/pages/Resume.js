@@ -89,7 +89,13 @@ export default () => {
               Passionate Developer
             </Text>
           </VStack>
-          <Stack spacing={4} p={4} bg="gray.200" borderRadius="lg" mt={6}>
+          <Stack
+            spacing={4}
+            p={4}
+            bgGradient="linear(to-r, purple.100, red.100)"
+            borderRadius="lg"
+            mt={6}
+          >
             <Heading fontSize="lg">About();</Heading>
             <Text mb={6}>
               <b>Hello, I am a passionate developer from India.</b> I love to
@@ -115,7 +121,13 @@ export default () => {
             />
             <ProfileItem title="Age" value="20 years" icon={<FiCalendar />} />
           </Stack>
-          <Stack spacing={4} p={4} bg="#ffe1c3" borderRadius="lg" mt={6}>
+          <Stack
+            spacing={4}
+            p={4}
+            bgGradient="linear(to-r, yellow.100, red.100)"
+            borderRadius="lg"
+            mt={6}
+          >
             <Heading fontSize="lg">Socials();</Heading>
             <ProfileItem
               title="Twitter"
