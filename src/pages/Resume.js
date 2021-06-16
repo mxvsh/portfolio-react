@@ -49,6 +49,22 @@ export default () => {
     </Box>
   );
 
+  const ProjectItem = ({ title, description, logo, link }) => (
+    <Flex alignItems="center">
+      <Image w={16} borderRadius="full" src={logo} />
+      <Box ml={2}>
+        <Heading fontSize="xl">{title}</Heading>
+        <Text textColor="gray.600" mt={1}>
+          {description}
+        </Text>
+      </Box>
+      <Spacer />
+      <a href={link} target="_blank">
+        View
+      </a>
+    </Flex>
+  );
+
   return (
     <Box>
       <SimpleGrid
@@ -152,10 +168,34 @@ export default () => {
                     title="Networking"
                     value={20}
                   />
-                  <ExperienceItem
-                    color="purple"
-                    title="Networking"
-                    value={20}
+                </Stack>
+              </Box>
+            </GridItem>
+            <GridItem colSpan={2}>
+              <Box p={4} borderRadius="lg" borderWidth="1px">
+                <Heading bgGradient="linear(to-l, red,purple)" bgClip="text">
+                  Projects
+                </Heading>
+                <Stack mt={4} spacing={4}>
+                  <ProjectItem
+                    link=" "
+                    logo="/assets/cgm.png"
+                    title="CGM (coming soon)"
+                    description="Push the limits of moderation with CGM. With tons of features that will help you better moderate your groups and channels."
+                  />
+
+                  <ProjectItem
+                    link="https://botmate.app"
+                    logo="https://botmate.app/assets/logo-color.png"
+                    title="BotMate"
+                    description="Modern platform for Telegram to help you with everything. Build and host your bots, manage your channels, run ads and more."
+                  />
+
+                  <ProjectItem
+                    link="https://youtube.com/xencodes"
+                    logo="https://www.freepnglogos.com/uploads/youtube-logo-icon-transparent---32.png"
+                    title="YouTube"
+                    description="Sharing my knowledge with others on YouTube"
                   />
                 </Stack>
               </Box>
