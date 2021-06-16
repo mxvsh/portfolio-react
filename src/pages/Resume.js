@@ -84,7 +84,7 @@ export default () => {
             <Heading fontSize="lg">About();</Heading>
             <Text mb={6}>
               <b>Hello, I am a passionate developer from India.</b> I love to
-              code and it's my hobby. I've been coding for the past 5 years,
+              code and it's my hobby. I've been coding for the past 5 years.
               <br />I started with HTML, CSS and JS then move on to PHP. I've
               worked with PHP for almost 2 years, then I switched to Node.js as
               it was popular.
